@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { Route,Routes } from 'react-router-dom'
+import Demo from './components/Demo'
+import  Update  from './components/UpdateNotes'
 const App = () => {
   return (
-    <div className='text-blue-500 bg-red-500'>App</div>
+   <Routes>
+      <Route path='/' element={<Demo/>}/>
+      <Route path='update' element={<Update/>}/>
+   </Routes>
   )
 }
 
