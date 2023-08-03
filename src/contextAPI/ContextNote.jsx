@@ -6,6 +6,7 @@ const ContextNoteAPI = ({children})=>{
     const [notes,setNotes] = useState([])
     const [state,setState]= useState({title:'',description:''})
     const [updatenode,setUpdatenode]= useState()
+    const [search,setSearch]= useState('')
     console.log(updatenode)
     const navigate = useNavigate()
     const Handlechange = (event)=>{
@@ -27,7 +28,7 @@ const ContextNoteAPI = ({children})=>{
         setNotes(filtered)
     }
     return(
-        <Context.Provider value={{ notes,setNotes,Handlechange,state,Handleclick,Update,updatenode,Delete}}>
+        <Context.Provider value={{ notes,setNotes,Handlechange,state,Handleclick,Update,updatenode,Delete,search,setSearch}}>
             {children}
         </Context.Provider>
     )
